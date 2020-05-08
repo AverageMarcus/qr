@@ -47,7 +47,7 @@ ci:
 
 .PHONY: release # Release the latest version of the application
 release:
-	@echo "⚠️ 'release' unimplemented"
+	@kubectl --namespace qr set image deployment qr web=docker.cluster.fun/averagemarcus/qr:$(SHA)
 
 .PHONY: help # Show this list of commands
 help:
